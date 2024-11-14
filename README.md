@@ -55,4 +55,31 @@ Web site >> Add Web Site sayfasına erişip domaini ve var ise SSL'inizi belirte
 ![image](https://github.com/user-attachments/assets/3e56ef3f-7bc5-46c6-9b5c-1ef9c53ac1c4)
 
 
+## IP Blacklist / Whitelist
+
+Sol tarafta bulunan menüden Black/White list sayfasına erişip gerekli işlemleri başarılı bir şekilde sağlayabilirsiniz.
+
+![image](https://github.com/user-attachments/assets/4ff456a3-980a-4498-b7df-2cba8aabdb90)
+
+
+## Custom Rules
+
+Custom Rules sayfası üzerinden tercihlerinize göre kurallar belirleyebilirsiniz. Örneğin IP grubu engelleyebilirsiniz, IP lokasyonu, URL, URL PATH gibi bir sürü seçenek sunmakta. Tercihinize göre kullanabilirsiniz.
+
+![image](https://github.com/user-attachments/assets/a2e28e53-4e15-45ed-b4f7-0f5bf02a505d)
+
+
+## Recaptcha
+
+Recaptcha menüsü üzerinden web sitelerinize özel veya hepsine birden Recaptcha ekleyebilirsiniz. Bu Recaptcha dilerseniz IP bazında olabilir dilerseniz URL. Tercihinize göre işlem sağlayabilirsiniz.
+
+![image](https://github.com/user-attachments/assets/2d95273c-0c40-4ee7-9f24-b9e3d0c797c7)
+
+
+
+------------------------------------------
+aaWAF temel bir çözüm sunmaktadır. Daha gelişmiş bir sistem kullanmak istiyor iseniz NGINX WAF veya APACHE WAF kullanabilirsiniz. 
+
+
+
 
