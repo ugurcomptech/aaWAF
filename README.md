@@ -77,6 +77,73 @@ Recaptcha menüsü üzerinden web sitelerinize özel veya hepsine birden Recaptc
 
 
 
+## WAF Panel SSL
+
+Erişmiş olduğunuz WAF adresine SSL sertifikası kurmak için WAF servisini durdurmamız gerekiyor.
+
+
+btw default yazarak WAF'ın CLI giriş sağlıyoruz.
+
+```
+================= aaWAF CLI ============================
+1) Restart WAF               2) restart Console (not affect website)
+
+3) WAF status                4) Stop WAF
+
+5) Start WAF                 6) View login info
+
+```
+
+4'e basarak WAF'ı durduruyoruz.
+
+
+Aşağıdaki komutu yazarak SSL sertifikasını alıyoruz.
+
+```
+sudo certbot certonly --standalone -d waf.mydomain.com
+```
+
+
+Sertifika dosyalarını ekrana yazdırıyoruz.
+
+```
+cat /etc/letsencrypt/live/waf.mydomain.com/privkey.pem 
+cat /etc/letsencrypt/live/waf.mydomain.com/fullchain.pem 
+```
+
+
+
+![image](https://github.com/user-attachments/assets/b33f9216-8362-4447-8570-06317b311a6a)
+
+Panelimize IP adresimiz ile erişiyoruz ve ayarlarımızı açıyoruz. İlk önce `bind domain` kutucuğuna adresinizi yazıyoruz.
+
+
+Set Certificate butonuna basıyoruz ve sertifikalarının yüklenmesi gereken sayfamız açılıyor.
+
+![image](https://github.com/user-attachments/assets/6ba534be-e37c-4a12-abf6-fcf18508a74b)
+
+
+`KEY` yazan kutucuğa `privkey.pem` dosyasının içeriğini yüklüyoruz.
+
+`Certificate (PEM format)` yazan kutucuğa `fullchain.pem` dosyasının içeriğini yüklüyoruz ve kaydediyoruz.
+
+
+btw default yazarak tekrar WAF'ın CLI giriş sağlıyoruz.
+
+```
+================= aaWAF CLI ============================
+1) Restart WAF               2) restart Console (not affect website)
+
+3) WAF status                4) Stop WAF
+
+5) Start WAF                 6) View login info
+
+```
+
+5'e basarak WAF'ı tekrar başlatıyoruz ve SSL sertifikamız başarılı bir şekilde kurulmuştur.
+
+
+
 ------------------------------------------
 aaWAF temel bir çözüm sunmaktadır. Daha gelişmiş bir sistem kullanmak istiyor iseniz NGINX WAF veya APACHE WAF kullanabilirsiniz. 
 
